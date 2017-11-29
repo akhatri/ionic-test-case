@@ -1,48 +1,3 @@
-# ionic-test-case
-Test case for ionic team
-
-To recreate the project:
-
-
-1) ionic start myApp tabs
-2) ionic g page testpage
-
-
-### Contents of home.ts
-
-```
-import { Component } from '@angular/core';
-import { NavController, App } from 'ionic-angular';
-
-@Component({
-  selector: 'page-home',
-  templateUrl: 'home.html'
-})
-export class HomePage {
-
-  constructor(
-    public navCtrl: NavController,
-    public app: App
-  ) {
-
-  }
-
-  clickA() {
-    this.app.getRootNavs()[0].push('TestpagePage');
-  }
-
-  clickB() {
-    this.navCtrl.push('TestpagePage');
-  }
-
-}
-
-
-```
-
-### Contents of home.html
-
-```
 <ion-header>
   <ion-navbar>
     <ion-title>Home</ion-title>
@@ -63,6 +18,3 @@ export class HomePage {
   <button ion-button (click)="clickA()">Push to Root nav (Can't swipe back)</button>
   <button ion-button (click)="clickB()">Push to Nav (can swipe back)</button>
 </ion-content>
-
-
-```
